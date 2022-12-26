@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type='text/javascript'>
+    window.smartlook || (function (d) {
+      var o = smartlook = function () { o.api.push(arguments) }, h = d.getElementsByTagName('head')[0];
+      var c = d.createElement('script'); o.api = new Array(); c.async = true; c.type = 'text/javascript';
+      c.charset = 'utf-8'; c.src = 'https://web-sdk.smartlook.com/recorder.js'; h.appendChild(c);
+    })(document);
+    smartlook('init', '337aec4ef67800b0d7cea11e419c986fa771140b', { region: 'eu' });
+  </script>
+  <!-- Bidvertiser2076415 -->
+  <style type='text/css'>
+    /* Animation */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px)
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes rubberBand {
+      from {
+        transform: scale3d(1, 1, 1)
+      }
+
+      30% {
+        transform: scale3d(1.25, 0.75, 1)
+      }
+
+      40% {
+        transform: scale3d(0.75, 1.25, 1)
+      }
+
+      50% {
+        transform: scale3d(1.15, 0.85, 1)
+      }
+
+      65% {
+        transform: scale3d(.95, 1.05, 1)
+      }
+
+      75% {
+        transform: scale3d(1.05, .95, 1)
+      }
+
+      to {
+        transform: scale3d(1, 1, 1)
+      }
+    }
+
+    /* Say Hi to Adblock */
+    #arlinablock {
+      background: rgba(0, 0, 0, 0.65);
+      position: fixed;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: auto;
+      z-index: 999999;
+      animation: fadeInDown 1s
+    }
+
+    #arlinablock .header {
+      margin: 0 0 15px 0
+    }
+
+    #arlinablock .inner {
+      background: #e3482d;
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 600px;
+      padding: 40px;
+      border-radius: 5px;
+      margin: 7% auto 2% auto;
+      animation: rubberBand 1s
+    }
+
+    #arlinablock button {
+      padding: 10px 20px;
+      border: 0;
+      background: rgba(0, 0, 0, 0.15);
+      color: #fff;
+      margin: 20px 5px;
+      cursor: pointer;
+      transition: all .3s
+    }
+
+    #arlinablock button:hover {
+      background: rgba(0, 0, 0, 0.35);
+      color: #fff;
+      outline: none
+    }
+
+    #arlinablock button.active,
+    #arlinablock button:hover.active {
+      background: #fff;
+      color: #222;
+      outline: none
+    }
+
+    #arlinablock .fixblock {
+      background: #fff;
+      text-align: left;
+      color: #000;
+      padding: 20px;
+      height: 250px;
+      overflow: auto;
+      line-height: 30px
+    }
+
+    #arlinablock .fixblock div {
+      display: none
+    }
+
+    #arlinablock .fixblock div.active {
+      display: block
+    }
+
+    #arlinablock ol {
+      margin-left: 20px
+    }
+
+    @media(max-width:768px) {
+      #arlinablock .inner {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 15px
+      }
+    }
+  </style>
+  <!-- <script type='text/javascript'>
+//<![CDATA[
+// Say Hi to Adblock
+// function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/Arlina-Design/quasar@master/arlinablock.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+//]]>
+</script> -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypery Hosting Template</title>
+  <div class="topnav" id="myTopnav">
+    <a href="/" class="logo"><img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACGCAMAAAAvpwKjAAAAYFBMVEX///9gYGBdXV1XV1daWlpUVFRRUVH5+fl/f3/v7+/y8vL29vbAwMBOTk7Y2Nj8/PxnZ2fn5+esrKx4eHjf39+MjIy6urrGxsakpKRvb2/R0dGenp60tLSTk5NISEiGhoafJNAiAAAExklEQVR4nO2a2WLqIBCGYVgSTMi+q/H93/KQmLa2wVaWeG74r6pU88kMMwMMQkFBQUFBQUFBQUFBQe6KhMj6rhqG6tJPpUj+B0NzudZESs6IEuNSsrGtsuidCCK9EUko4G8CSrisu+Y9DFHWFoziJ6IM3/o3mKer5VOGjYSPl/xQhqijDH6HWM3DWHXgjEwjeQFiFRnTg2YkOfNXIdYZuYkjKCZCXodYRGXnHSIaXnGKHyKtZw9JbswYYuEYS58UJf5jkT4ThckfRVZYUiyhtfdF0djOxcrBPM1HaeGcjyJeOMrRjQIDZO4UeexgkY0Dn5wxroZBSycauwb2VLpTYMzObhSlDwgl6uam7o5xF2AXis6DY9xFBnuK3CqR6EXta9TB22QojJstRenJMTYOWy89e5yMJXjYUYjCJwXGs13tcfHooIvo1QqjcExpOxU2NXLjJYw/iqcWGD5X611Qm1MkrmWGRoW5k5bebaIiunldWnleJ4toa4zReg2hd5nn2SNcA2NpWg02mt/Cv9YOMAlUfpTsVBIqP/bZwB+Hvoub5pVpt1yhnoYPQ9GxE1EkLuP6Bm2bKEr6eP0ILdKTGuq0OyxyMcTodh4KMUrJB0WCRJqW6HRTD+Mdyvs0Q/lSPdM4QWXaC5ToCjdqWpPus+sDhir4zzPj8xXlanc4oIlJNtcnBBiKE2pnvgwlmmQArWGJvl8oXxjssi1nXqELoXkJywNV9X0mrEMDX4cuutQIseGJZbz7KV8YpET3J8CYNOT2+bzbCHNy2v57zDUBUH3ADGO/Xj8x1HeV8/092kTK6xYvIIwxzjD/zIhSRJoAWBiu2L1hvzDqKNueRbOcpagGtV3O1WKZKEYTvw/NAulyo0cMZYoNA5pEeYPCoEOapklGCfog5KeEH4qBQUR3o8AYZXxYV9ViFJHRGQm+DeWZLjkaYtS/YPAetetfaqVUrEDN6gSq5M2oGrrvvdVK0VTUUBi66D74LBicKoEqX071cm8QRwldTlEGrl7gRmFAnJ8Ktgxpt79QG2Jo44bIFk1sKW77qupRpGhBlZhZNXSRaBqK2bANJbUmihrHjUqTU7JmVcYwibME5aJfEwfgTuSRSOk5VZZchnI1BLqcYlxwpJoQSDct30fHui62NAqkUC8IrMF0G9IfrlPTDfU+w/6EAvj26unQo4jp8bWv85Xv4qaHcdF+xXqQND5DP6QWLUwpVIzwj2Fx5HPIPsX8iOMI57DZS+8DmKssdktHWIVb3Wn43jAZp9e7es9WIZUNhff942x5j+B3U2/loOt0eD39AutLSJ+RlDjcZWCP0+FwVT558w63i3Jf59XU4hDwQcKTl4Jjq00z+6Dgzr0LFw9mcb3xW+R+A0pHD31YeezIQU1PE55w6PZfJhSeejiECwfYB/GfUhtn67nAPvtZ7Hpq1BqpvfjFp+zCKfPdY4T6v3rw9gJpV2/9KhEbpn02HtIsmXfYwDIUzkc1j4p2ftEyIOMj+0bLK39hRqi8eWz30qq54t87n4DgODu2X3RVeRnls4ZNIBKqN7XxLiQ3kIw+Hi4BUCJJ/D6GVflpaa0eC/VwJQp4rNsqE28who6lbLJJKWvK038hCAoKCgoKCgoKCgryqn+gQUMUdSNwGwAAAABJRU5ErkJggg=="
+        class="img" /></a>
+    <a href="#
+">Link 5</a>
+    <a href="#
+">Link 4</a>
+
+    <a href="#">Link 3</a>
+
+    <a href="#
+               ">Link 2</a>
+    <a href="#">Link 1</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1>Your Hosting <span class="rgb">Slogan</span></h1>
+    <p><strong>Hypery</strong>, hosting served in style.</p>
+    <button><a href="#">
+        Get Started &nbsp; <i class="fa-solid fa-up-right-from-square"></i>
+
+      </a>
+    </button>
+  </div>
+  <br>
+  <center>
+    <h1>One host for all your needs!</h1>
+  </center>
+
+
+  <div class="wrapper">
+    <section class="columns">
+      <div class="column">
+        <h2> Feature 1</h2>
+        <p>
+          ...
+
+        </p>
+      </div>
+      <div class="column">
+        <h2> Feature 2</h2>
+        <p>
+          ...
+
+        </p>
+      </div>
+      <div class="column">
+        <h2> Feature 3</h2>
+        <p>
+          ...
+        </p>
+      </div>
+    </section>
+  </div>
+  <br />
+</body>
+<center>
+  <h1>Popular Plans:</h1>
+  <p>
+    Refer a friend and recieve one free server slot!
+  </p>
+  <center>
+    <div class="wrapper">
+      <section class="columns">
+        <div class="column plan1">
+          <h3>Plan 1</h3>
+          <ul class="ul">
+            <li class="li">..</li>
+            <li class="li">...</li>
+            <li class="li">...</li>
+
+            <li class="li">...</li>
+          </ul>
+        </div>
+
+        <div class="column plan2">
+          <h3>Plan 2</h3>
+          <ul class="ul">
+            <li class="li">..</li>
+            <li class="li">...</li>
+            <li class="li">...</li>
+
+            <li class="li">...</li>
+          </ul>
+        </div>
+      </section>
+    </div><br><br>
+ 
+          <center>
+            <div class="ad">
+              <div id="ntv_2073780"></div>
+        
+              <br><br>
+              <footer>
+                <div class="logo"><img
+                    src="htttachments/893279343399284736/996201259310796830/ergergegre.png"
+                    class="img" hidden/>
+                  <h1 class="name">Hypery Hosting Template</h1>
+                  <p>
+                    Copyright 2022-23 Aidan
+
+                    <br>Created by love and Hyper Development<br>
+
+                  </p>
+                </div>
+
+
+              </footer>
+              </body>
+
+              <script src="https://kit.fontawesome.com/19e1b3c1b9.js" crossorigin="anonymous"></script>
+              <!-- <script>// ES6 Modules or TypeScript
+
+swal('hello')
+  </script> -->
+
+</html>
